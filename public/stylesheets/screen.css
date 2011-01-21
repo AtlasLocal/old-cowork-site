@@ -1,0 +1,498 @@
+/*
+Title:    CoWork - Screen
+Author:   Sean Gaffney, hello@seangaffney.cc
+Version:  2010.08
+*/
+
+/* 
+HTML5 ---------------------------- */
+header,footer,section,aside,nav,article {
+  display: block;
+}
+
+
+/* 
+GENERAL STYLES ---------------------------- */
+
+html {
+  background: #f5f5f5 url('../images/bg-html.gif') repeat-x scroll top left;
+}
+
+body {
+  margin: 13px 0 0;
+  color: #484747;
+  background: transparent url('../images/bg-dot.png') repeat scroll top center;
+}
+
+hr {
+  display: none;
+}
+
+p {
+  line-height: 120%;
+} 
+
+a {
+  color: #ff3839;
+  text-decoration: none;
+} 
+
+a:hover {
+  color: #06c;
+}
+
+a img {
+  border: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.button {
+  display: block;
+  padding: 6px 12px 9px;
+  background: #978A20;
+  width: 190px;
+  color: #fff;
+  font-size: 21px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a.button {
+  background: #FF3839;
+}
+
+a.button:hover {
+  background: #CB2F2F;
+}
+
+
+
+/* 
+WRAPPERS ---------------------------- */
+
+body > #wrap {height: auto; min-height: 100%;}
+
+#wrap, #page {
+  margin: 0 auto;
+  width: 980px;
+}
+
+#wrap {
+  padding-bottom: 200px;
+}
+
+#page {
+  padding: 15px;
+  width: 950px;
+  background: #f5f5f5;
+  -webkit-box-shadow: 0px 0px 1px #000;
+  -moz-box-shadow: 0px 0px 1px #000;
+  box-shadow: 0px 0px 1px #000;
+}
+
+
+/* 
+STYLES ---------------------------- */
+
+header {
+  position: relative;
+  padding: 30px 0 0;
+}
+
+header h1 {
+  font-size: 40px;
+  text-indent: -9999em;
+}
+
+header h1 a {
+  display: block;
+  margin: 0 0 34px 15px;
+  background: url('../images/bg-logo.png') no-repeat scroll top left;
+  width: 574px;
+  height: 50px;
+  color: #3a3824;
+}
+
+header h1 p {
+  display: none;
+}
+
+header .button {
+  position: absolute;
+  top: 39px;
+  left: 750px;
+}
+
+header nav {
+  display: none;
+}
+
+header nav .main {
+  float: left;
+  margin-right: 15px;
+}
+
+header nav .main li {
+  float: left;
+  font-size: 138.5%;
+  border-right: 1px solid rgba(65,62,32,0.2);
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter:alpha(opacity=50);
+}
+
+header nav .main li:last-child {
+  border: 0;
+}
+
+header nav .main li a {
+  padding: 8px 16px;
+  color: #413e22;
+  display: block;
+}
+
+header nav li a:hover {
+  color: #fff;
+}
+
+header nav .sub, header nav .sub li, header nav .action li {
+  float: left;
+}
+
+header nav .sub {
+  position: absolute;
+  top: 128px;
+  left: 716px;
+  margin: 2px 0 0 0;
+}
+
+header nav .sub li {
+  margin: 0 5px 0 0;
+  height: 26px;
+  width: 80px;
+  font-size: 85%;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter:alpha(opacity=50); 
+}
+
+header nav .sub li:last-child {
+  margin: 0;
+}
+
+header nav .sub li a {
+  display: block;
+  padding: 7px 0;
+  background: rgba(255,255,255,0.2);
+  color: #333122;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+header nav .sub li a:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+header nav .action {
+  position: absolute;
+  top: 53px;
+  left: 716px;
+}
+
+header nav .action li {
+  text-transform: uppercase;
+}
+
+header nav .action li a {
+  display: block;
+  margin: 7px 13px 0 0;
+  padding: 5px 12px 6px;
+  background: #bdab19;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+header nav .action li.join a {
+  margin: 0;
+  padding: 7px 12px 8px;
+  font-size: 17.74px;
+  padding-left: 53px;
+  background: #bdab19 url('../images/bg-hand.png') no-repeat scroll top left;
+}
+
+
+/* 
+SLIDESHOW ---------------------------- */
+
+#slideshow {
+  position: relative;
+  margin: 0 0 40px;
+  width: 950px;
+  height: 378px;
+  background: #000;
+}
+
+#slideshow .nav li {
+  position: relative;
+  float: left;
+  width: 25%;
+}
+
+#slideshow .slides {
+  position: absolute;
+  width: 950px;
+  height: 378px;
+}
+
+#slideshow .slides li, #slideshow .slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#slideshow .slides .details {
+  position: absolute;
+  padding-left: 26px;
+  height: 378px;
+  width: 211.5px;
+  background: rgba(0,0,0,0.5);
+}
+
+#slideshow .slides .active .details, #slideshow .slides .active img {
+  z-index: 3;
+}
+
+#slideshow .slides .details span {
+  position: absolute;
+  bottom: 90px;
+  width: 180px;
+  color: #fff;
+/*  font-size: 34px;*/
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: -1px;
+/*  line-height: 36px;*/
+  line-height: 30px;
+    text-shadow: rgba(0, 0, 0, 0.396094) 1px 1px 1px;
+}
+
+#slideshow .slides .details a {
+  display: none !important;
+  position: absolute;
+  top: 20px;
+  display: block;
+  padding: 6px 12px 9px;
+  background: #ff3839;
+  width: 166px;
+  color: #fff;
+  font-size: 21px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#slideshow .nav {
+  position: relative;
+  top: 306px;
+  width: 952px;
+  z-index: 5;
+}
+
+#slideshow .nav li {
+  float: left;
+}
+
+#slideshow .nav li a {
+  display: block;
+  position: relative;
+  padding: 30px 0 0;
+  background: url('../images/bg-chevron.png') no-repeat scroll top center;
+  height: 54px;
+  color: #1b2023;
+  font-size: 138.5%;
+  font-weight: bold;
+  text-align: center;
+  z-index: 5;
+/*  -webkit-transition: all .10s linear;*/
+}
+
+#slideshow .nav li.one a {
+  background-position: top left;
+}
+
+#slideshow .nav li.two a {
+  background-position: 1px 0;
+}
+
+#slideshow .nav li.three a {
+  background-position: 1px 0;
+}
+
+#slideshow .nav li.four a {
+  background-position: 2px 0;
+}
+
+
+#slideshow .nav li.active a {
+  margin: 8px 0 0 26px;
+  padding: 22px 0 0;
+  background: url('../images/bg-chevron-active.png') no-repeat scroll top left;
+  width: 181px;
+  height: 63px;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.986719) 1px 1px 1px;
+}
+
+
+/* 
+MAIN ---------------------------- */
+
+#main .col2l, #main .col2r {
+  float: left;
+  width: 450px;
+}
+
+#main .col2r {
+/*  float: right;*/
+}
+
+#main .col2l {
+  margin-right: 50px;
+}
+
+#main article h3 {
+  font-size: 30px;
+/*  line-height: 73px;*/
+  margin: 0.75em 0 0.375em;
+  padding-bottom: 0.375em;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+#main article h3, #main article h3 a {
+  color: #202020;
+}
+
+#main article h3 span, #main article h3 a span, #main article p em {
+  color: #978a20;
+}
+
+#main article h4 {
+  clear: both;
+  margin: 0.7em 0 0.3em;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #545454;
+  font-weight: bold;
+}
+
+#main article p, #main article li {
+  line-height: 1.4444444444em;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main article p {
+  margin-bottom: 1em;
+}
+
+#main article section.large p {
+  font-size: 128.5%;
+}
+
+#main article p em {
+  font-weight: bold;
+}
+
+#main article li {
+  list-style: disc inside;
+}
+
+#main article .callout {
+  float: left;
+  margin-right: 20px;
+  padding: 0 0 0 15px;
+  background: #e7e6d8;
+  width: 175px;
+  height: 68px;
+  color: #978a20;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 65px;
+}
+
+#main article .callout span {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* 
+FOOTER ---------------------------- */
+
+footer {
+/*  margin: 45px 0 0;*/
+/*  padding: 35px 0 45px;*/
+/*  border-top: 1px solid #cbcbcb;*/
+}
+
+footer a {
+  color: #454545;
+}
+
+footer h4 {
+  font-size: 16px;
+  line-height: 1.875em;
+}
+
+footer h4 a {
+  color: #202020;
+}
+
+footer nav {
+  display: none;
+}
+
+footer .main li {
+  float: left;
+  margin-right: 45px;
+  line-height: 1.8461538462em;
+}
+
+footer .main li li {
+  float: none;
+  margin: 0;
+}
+
+footer .sub li {
+  margin: 0;
+}
+
+
+/* 
+P.I.E. FLOAT CLEARING ---------------------------- */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
